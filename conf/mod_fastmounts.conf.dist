@@ -1,0 +1,22 @@
+[worldserver]
+
+################################################################################
+# mod-fastmounts
+################################################################################
+
+# FastMounts.Enable
+#    Description: Enable/disable fast land mount speed scaling.
+#    Default:     1 (enabled)
+FastMounts.Enable = 1
+
+# FastMounts.FastLandMountTargetRunRate
+#    Description: Fixed target run rate for fast ground mounts (100% baseline mounts).
+#                 2.5 means fast mounts move at 150%.
+#    Default:     2.5
+FastMounts.FastLandMountTargetRunRate = 2.5
+
+# FastMounts.SlowLandMountTargetRunRate
+#    Description: Fixed target run rate for slow ground mounts (60% baseline mounts).
+#                 2.0 means slow mounts are normalized to 100%.
+#    Default:     2.0
+FastMounts.SlowLandMountTargetRunRate = 2.0

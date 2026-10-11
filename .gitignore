@@ -1,0 +1,10 @@
+*.swp
+*.swo
+*.log
+*.bak
+build/
+__pycache__/
+
+# Client patch files (Blizzard Spell.dbc data, ~49 MB each). Kept on the server in
+# /data/modules/mod-fastmounts/data/client, not in git.
+data/client/
