@@ -1,36 +1,36 @@
 # mod-fastmounts
 
+<img src="icon.png" alt="" width="64" align="right">
+
 An [AzerothCore](https://www.azerothcore.org/) (WotLK 3.3.5a) module that speeds up
 ground mounts: slow (60%) mounts run at 100% and fast (100%) mounts at 150%.
 
-## What it does
+- **Author:** [dudemcbro](https://github.com/dudemcbro)
+- **License:** [GNU AGPL v3.0](LICENSE)
+- **Works with:** AzerothCore WotLK (3.3.5a). The module only uses standard core APIs,
+  with no SQL and no core patches.
 
-- Sets a fixed run rate for each ground mount tier while the player is mounted:
-  `2.0` (100%) for slow mounts and `2.5` (150%) for fast mounts, both configurable.
-- Flying mounts and taxi flights are not changed.
-- No database changes.
+## Features
+
+- **Faster ground mounts.** Sets a fixed run rate for each ground mount tier while the
+  player is mounted: `2.0` (100%) for slow mounts and `2.5` (150%) for fast mounts, both
+  configurable.
+- **Nothing else changes.** Flying mounts and taxi flights are not changed, and there are
+  no database changes.
 
 The alternative built into the core, `Rate.MoveSpeed.Player` in `worldserver.conf`,
 changes all player movement, not only mounts.
 
-## Requirements
-
-- AzerothCore WotLK (3.3.5a). The module only uses standard core APIs.
-- No SQL and no core patches.
-
-## Installation
+## Quick start
 
 1. Clone the module into the core's `modules` folder:
-
    ```sh
    cd <azerothcore>/modules
    git clone https://github.com/dudemcbro/mod-fastmounts.git
    ```
-
 2. Re-run CMake and rebuild the core, for example with `./acore.sh compiler build`.
    AzerothCore compiles everything under `src/` and calls
    `Addmod_fastmountsScripts()`, so no `CMakeLists.txt` is needed.
-
 3. Set up the config file (below) and restart `worldserver`.
 
 ## Configuration
@@ -64,7 +64,9 @@ git pull
 Then re-run CMake, rebuild and restart `worldserver`. Compare your
 `mod_fastmounts.conf` with the new `.conf.dist` and add any new options.
 
-To remove the module, delete its folder, re-run CMake and rebuild.
+## Removing the module
+
+Delete its folder, re-run CMake and rebuild.
 
 ## Contributing
 
@@ -74,4 +76,4 @@ an issue first, and describe how you tested your change.
 
 ## License
 
-GNU Affero General Public License v3.0, see [LICENSE](LICENSE).
+Licensed under the GNU Affero General Public License v3.0. See [LICENSE](LICENSE).
